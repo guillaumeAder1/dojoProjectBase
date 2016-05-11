@@ -1,0 +1,77 @@
+﻿<!--
+ | Copyright 2015 ESRI (UK) Limited
+ |
+ | Licensed under the Apache License, Version 2.0 (the "License");
+ | you may not use this file except in compliance with the License.
+ | You may obtain a copy of the License at
+ |
+ |    http://www.apache.org/licenses/LICENSE-2.0
+ |
+ | Unless required by applicable law or agreed to in writing, software
+ | distributed under the License is distributed on an "AS IS" BASIS,
+ | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ | See the License for the specific language governing permissions and
+ | limitations under the License.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <title>My App</title>
+
+        <link href="js/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+		
+		
+		
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		
+		<script type="text/javascript">
+            var dojoConfig = {
+                async: true,
+                isDebug:true,
+                paths: {
+                    "app": location.pathname.replace(/\/[^/]+$/, "") + "/js"
+                },
+                packages: [
+                    { name: "jquery", location: "//code.jquery.com", main: "jquery-1.10.2.min" }
+                ]
+            };
+        </script>
+		 <script src="//js.arcgis.com/4.0/"></script>
+    </head>
+    <body class="claro">
+        <p>
+			Hello, im an example app
+		</p>
+		
+		<div id="map"></div>
+        <div id="accordion"></div>
+		
+		
+		<!-- <script src="js/init.js"></script> -->
+		<script>
+		require([
+            "dojo/parser",
+			"app/init"
+        ], function(
+            parser,
+            app
+        ){
+            parser.parse();
+          // create the template. This will take care of all the logic required for template applications
+			var t = new app();
+			t.init()
+        });
+		</script>
+		
+    </body>
+</html>

@@ -1,0 +1,10 @@
+﻿#map{
+	height:550px;
+	width: 100%;
+	float:left;
+	position:relative;
+}
+
+p{
+	padding:10px;
+}
